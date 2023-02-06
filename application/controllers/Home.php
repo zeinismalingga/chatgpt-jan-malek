@@ -21,21 +21,11 @@ class Home extends CI_Controller
 
         $prompt = $this->input->post('text');
 
-        // Set the maximum length
-        $max_length = 3000;
-
-        if (strlen($prompt) > $max_length) {
-            $prompt = substr($prompt, 0, $max_length);
-        }
-
         $jayParsedAry = [
             "model" => "text-davinci-003",
             "prompt" => $prompt,
             "max_tokens" => 3000,
-            "temperature" => 0.9,
-            "top_p" => 1,
-            "frequency_penalty" => 0,
-            "presence_penalty" => 0.6
+            "temperature" => 0.9
         ];
 
         $payload = json_encode($jayParsedAry);
@@ -54,7 +44,7 @@ class Home extends CI_Controller
             CURLOPT_POSTFIELDS => $payload,
             CURLOPT_HTTPHEADER => array(
                 'Content-Type: application/json',
-                'Authorization: Bearer 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'
+                'Authorization: Bearer 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'
             ),
         ));
 
