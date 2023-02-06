@@ -54,7 +54,7 @@ class Home extends CI_Controller
             CURLOPT_POSTFIELDS => $payload,
             CURLOPT_HTTPHEADER => array(
                 'Content-Type: application/json',
-                'Authorization: Bearer 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'
+                'Authorization: Bearer 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'
             ),
         ));
 
