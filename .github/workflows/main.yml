@@ -1,0 +1,31 @@
+name: Deploy wesite on push
+
+# Controls when the workflow will run
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  web-deploy:
+    name: Deploy
+    
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read  # <--- allows to read repo
+    steps:
+    - name: Get latest code
+      
+      uses: actions/checkout@v3
+      
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: ftp25.c4.cz
+        username: chat.theeuroroadtrip.eu
+        password: 8xHD54*RR22
+        server-dir: /
+        exclude: |
+          **/vendor/**
+          **/.git*
+          **/.git*/**
