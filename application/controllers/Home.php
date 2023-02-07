@@ -16,6 +16,11 @@ class Home extends CI_Controller
         $this->load->view('home');
     }
 
+    public function test_aja()
+    {
+        echo 'ok';
+    }
+
     public function get_response()
     {
 
