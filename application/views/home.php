@@ -88,7 +88,7 @@
                 success: function(response) {
                     console.log(response)
                     response = JSON.parse(response)
-                    var result = response.choices.at(0).text
+                    var result = response.choices.at(0).text.trim()
                     $('#results').html(result)
                 },
                 complete: function() {
