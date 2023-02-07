@@ -21,10 +21,10 @@ jobs:
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: ftp25.c4.cz
-        username: chat.theeuroroadtrip.eu
+        server: 176.227.168.166
+        username: euroroadtrip.eu_y2983ynl2wf
         password: 8xHD54*RR22
-        server-dir: /
+        server-dir: httpdocs/
         exclude: |
           **/vendor/**
           **/.git*
