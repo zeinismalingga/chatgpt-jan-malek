@@ -21,10 +21,10 @@ class Home extends CI_Controller
         echo 'ok';
     }
 
-    public function get_response($prompt = 'hi')
+    public function get_response()
     {
 
-        // $prompt = $this->input->post('text');
+        $prompt = $this->input->post('text');
 
         $jayParsedAry = [
             "model" => "text-davinci-003",
